@@ -15,12 +15,10 @@
 .fa-solid, .fa-regular {
     color: var(--main-color);
 }
-
 body {
     display: flex;
     justify-content: center;
 }
-
 .main-container{
     max-width: 1440px;
     width: 100%;
@@ -97,7 +95,7 @@ header li a:hover{
     width: 338px; 
     border-radius: 15px;
 }
- .search-icon{
+.search-icon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,6 +105,9 @@ header li a:hover{
     background: #F2F2F2;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+}
+.search-icon i{
+    color:#0c0c0c;
 }
 .search-bar input{
     flex: 1;
@@ -136,6 +137,7 @@ header li a:hover{
 }
 .search-btn i{
     display: none;
+    color:#fff;
 }
 
 
@@ -193,29 +195,23 @@ header li a:hover{
 
 /*******commun*****/
 .section-title {
-    margin: 0;
     font-size: 22px;
 }
-
 .card {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-
 .card img {
     object-fit: cover;
 }
-
 .card-title {
     font-size: 16px;
 }
-
 .euro {
     font-weight: 700;
 }
-
 .neutralStar {
     color: var(--main-bg-color)
 }
@@ -227,12 +223,10 @@ header li a:hover{
     display: flex;
     justify-content: space-between;
 }
-
 .accommodation-and-popular section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
-    box-sizing: border-box;
 }
 
 
@@ -381,8 +375,10 @@ footer{
 
 
 
+
+
 /******media query*****/
-@media (max-width: 1024px ) and (min-width: 375px){
+@media (max-width: 1024px ) {
     .accommodation-and-popular {
         display: flex;
         flex-direction: column;
@@ -409,11 +405,132 @@ footer{
 
 
 
+
+
+
+
+@media (max-width: 768px)  and (min-width: 375px) {
+    .main-container {
+        padding: 0 40px;
+    }
+    .filters{
+    gap: 20px;
+    }
+    .filters ul{
+        gap: 9px;
+    }
+    .filters a{
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 10px 15px;
+        border: 2px solid #F2F2F2;
+        border-radius: 25px; 
+     }
+    .filters i{
+        margin-right: 10px ;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+    .card {
+        padding: 3.5px;
+    }
+    .card-title {
+        font-size: 15px;
+    }
+    .card-subtitle{
+        font-size: 14px;
+    }
+    .accommodation-and-popular {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .accommodation-and-popular section {
+        padding: 15px;
+    }
+    .accommodation {
+        width: 100%;
+    }
+    .accommodation-card{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .accommodation-card .card{
+        width: 32%;
+    }
+    .accommodation img{
+        width: 100%;
+        height: 114px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px; 
+        margin-bottom: 4px;
+    }
+    .accommodation button{
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .popular {
+        width: 100%;
+    }
+    .popular-cards{
+        gap: 12px;
+    }
+    .popular-cards .card {
+        margin-top: 25px;
+    }
+    .popular-cards img {
+        width: 40%;
+        height: 136px;
+    }
+    .popular-cards .card-content {
+        padding-left: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    
+    .things-to-do{
+       padding: 0;
+    }
+    .things-to-do .title{
+        font-size: 20px;
+    }
+    .thing-to-do-cards{
+        gap: 0px;
+    }
+    .things-to-do h3{
+        padding: 10px 19px;
+        font-size: 15px;
+    }
+    
+    footer{
+        padding: 15px;
+    }
+     footer .title{
+        font-size: 16.5px;
+    }
+    .group li{
+        margin-bottom: 10px;
+    }
+    .group li a {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
 @media (max-width: 375px) {
     .main-container{
         padding: 0;
     }
-
 
     header {
         padding: 0;
@@ -444,8 +561,6 @@ footer{
     header li a:hover{
         border-top: 0;
     }
-
-
     .search-area{
         padding: 145px 20px 35px;
     }
@@ -462,8 +577,6 @@ footer{
         display: inline-block; 
         font-size: 18px;
     }
-
-
     .filters{
         flex-direction: column;
         gap: 20px; 
@@ -486,11 +599,10 @@ footer{
     .filters i{
         margin-right: 6px ;
     }
-
-
     .accommodation-and-popular section {
         background-color: #fff;
         border-radius: 0px;
+        padding: 30px 20px;
     }
     .accommodation-and-popular .popular{
         background-color: #F2F2F2;
@@ -499,6 +611,7 @@ footer{
         flex-direction: column-reverse;
         gap: 15px;
     }
+
     .popular-cards {
         flex-direction: column;
     }
@@ -516,9 +629,12 @@ footer{
         background-color: #fff;
     }
 
-
+    .things-to-do{
+        padding: 30px;
+    }
     .thing-to-do-cards{
         flex-direction: column;
+        gap: 20px;
     }
     .things-to-do .card{
         width: 100%;
@@ -529,11 +645,10 @@ footer{
         border-top-left-radius: 20px;
         border-top-right-radius: 20px; 
     }
-
-
     footer{
         flex-direction: column;
         gap: 50px;
+        padding: 30px;
     }
     .group{
         width: 100%;
